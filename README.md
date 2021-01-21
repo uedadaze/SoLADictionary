@@ -27,6 +27,8 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 
 - 「Mouse Dictionary」に既に他の辞書ファイルを読み込ませていた場合、本辞書ファイルの内容で上書きされる場合がございます。ご了承の上でお使い下さい（特に和英辞書を使用されている場合はご注意下さい）。
 
+- 性質上辞書ファイルは「Story of Lost Artifact」のネタバレ要素を含みます。
+
 # クレジット
 
 製作者: 切り株（Twitter: @BehindForestBoy／SoLAのDiscordサーバーにも常駐しております）
