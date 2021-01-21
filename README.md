@@ -2,7 +2,7 @@
 最終更新: 2021年1月20日
 
 # 概要
-Webゲーム[「Story of Lost Artifact」](http://lostartifact.xsrv.jp/SoLA/login.php)用の辞書ファイルです。
+Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)用の辞書ファイルです。
 
 Google Chrome/Firefox用拡張機能「Mouse Dictionary」に読み込ませて使うものとなっております。（JSON形式なので他でも使えるかもしれません）
 
