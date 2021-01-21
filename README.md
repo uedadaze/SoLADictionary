@@ -4,7 +4,7 @@
 # 概要
 Webゲーム[「Story of Lost Artifact」](http://lostartifact.xsrv.jp/SoLA/login.php)用の辞書ファイルです。
 
-Google Chrome/Firefox用拡張機能「Mouse Dictionary」に読み込ませて使うものとなっております。
+Google Chrome/Firefox用拡張機能「Mouse Dictionary」に読み込ませて使うものとなっております。（JSON形式なので他でも使えるかもしれません）
 
 # 含まれる内容
 - ゲームシステム上の用語とその解説
