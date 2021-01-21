@@ -23,7 +23,7 @@ Google Chrome/Firefox用拡張機能「Mouse Dictionary」に読み込ませて�
 Discordをブラウザから開けばSoLAのDiscordサーバーでも使えます。
 
 # 注意事項
-- 本辞書ファイルは「Story of Lost Artifact」ならびに「Mouse Dictionary」の作者様とは一切関係はございませんので、本辞書ファイルに関する質問等をお送りすることは絶対におやめ下さい。
+- 本辞書ファイルは「Story of Lost Artifact」ならびに「Mouse Dictionary」の製作者様とは一切関係はございませんので、本辞書ファイルに関する質問等をお送りすることは絶対におやめ下さい。
 
 - 「Mouse Dictionary」に既に他の辞書ファイルを読み込ませていた場合、本辞書ファイルの内容で上書きされる場合がございます。ご了承の上でお使い下さい（特に和英辞書を使用されている場合はご注意下さい）。
 
