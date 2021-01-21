@@ -31,7 +31,7 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 
 # 謝辞
 
-製作にあたっては[Story of Lost Artifact Wiki](https://wikiwiki.jp/sola/)の記述を利用させていただいております。Wikiの編集に携わっておられます全ての方々にお礼申し上げます。
+本辞書ファイルの製作にあたっては[Story of Lost Artifact Wiki](https://wikiwiki.jp/sola/)の記述を利用させていただいております。Wikiの編集に携わっておられます全ての方々にこの場を借りてお礼申し上げます。
 
 # 製作者
 
