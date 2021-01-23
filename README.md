@@ -1,5 +1,5 @@
 # SoLADictionary
-最終更新: 2021年1月20日
+最終更新: 2021年1月23日
 
 # 概要
 Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)用の辞書ファイルです。
@@ -15,6 +15,8 @@ Google Chrome/Firefox用拡張機能「Mouse Dictionary」に読み込ませて�
 
 - スキルカードの名称と収録スキル
 
+- 敵NPCの情報（現在はメインストーリーのみ対応しております）
+
 # 使い方
 1. Google ChromeあるいはFirefoxで、[「Mouse Dictionary」](https://mouse-dictionary.netlify.app/ja/)をインストールしてください。
 2. ブラウザのツールバーから「Mouse Dictionary」の設定画面を開き、「辞書データの文字コード」を「UTF-8」に、「辞書データの形式」を「JSON」に指定し、「ファイルを選択」ボタンから辞書ファイル（SoLA_Dict.json）を選択してください。その後「LOAD」ボタンを押し、登録完了のダイアログが出たら「OK」ボタンで閉じて下さい。
@@ -28,6 +30,8 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 - 「Mouse Dictionary」に既に他の辞書ファイルを読み込ませていた場合、本辞書ファイルの内容で上書きされる場合がございます。ご了承の上でお使い下さい（特に和英辞書を使用されている場合はご注意下さい）。
 
 - 性質上辞書ファイルは「Story of Lost Artifact」のネタバレ要素を含みます。
+
+- 本辞書ファイルは細心の注意を払って作成されておりますが、「Story of Lost Artifact」の最新の設定を反映していない、あるいは情報に間違いがある場合がございます。ご利用は自己責任でお願いいたします。
 
 # 謝辞
 
