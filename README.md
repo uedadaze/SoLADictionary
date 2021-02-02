@@ -1,5 +1,5 @@
 # SoLADictionary
-最終更新: 2021年1月23日20時ごろ
+最終更新: 2021年2月2日9時ごろ
 
 # 概要
 Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)用の辞書ファイルです。
