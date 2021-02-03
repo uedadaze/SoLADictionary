@@ -1,8 +1,10 @@
-# SoLA絡みの制作物
+# SoLA絡みの製作物
 
-Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)のゲームプレイを補助する目的の制作物を公開しております。
+Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)のゲームプレイを補助する目的の製作物を公開しております。
 
-ここで公開されております制作物についてはいずれも自己責任のもとでの使用をお願いいたします。
+製作者はSoLA公式とは一切関係がございません。本ページの製作物についてSoLA公式に問い合わせを行うことは絶対におやめください。
+
+ここで公開されております製作物についてはいずれも自己責任のもとでの使用をお願いいたします。
 
 - [SoLADictionary](#SoLADictionary)
 - [DontTellMeAboutChallangeDungeon](#DontTellMeAboutChallangeDungeon)
