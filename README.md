@@ -1,7 +1,9 @@
 # SoLA絡みの制作物
 
+ここで公開されております制作物についてはいずれも自己責任のもとでの使用をお願いいたします。
+
 - [SoLADictionary](#SoLADictionary)
-- [DontTellMeAboutChallangeDungeon](#DontTellMeAboutChallangeDungeon.user.js)
+- [DontTellMeAboutChallangeDungeon](#DontTellMeAboutChallangeDungeon)
 
 ## SoLADictionary
 最終更新: 2021年2月2日9時ごろ
@@ -50,11 +52,19 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 
 最終更新 2021年2月3日
 
-Tampermonkey/Greasemonkey用スクリプトです。
+### 概要
 
-ゲーム中の「チャレンジダンジョン」に関する情報をすべて隠します。具体的には、
+Tampermonkey/Greasemonkey用スクリプトです。使用中はゲーム中の「チャレンジダンジョン」に関する情報をすべて隠します。具体的には、
 
 - メニューから「チャレンジダンジョン」の項目を削除します。
 
 - プロフィールページのチャレンジダンジョン最深到達階に関する記述を隠します。
 
+チャットにおけるチャレンジダンジョン関連の発言は隠せませんので、そちらはゲーム中のミュート機能をお使いいただきますようお願い申し上げます。
+
+### 使い方
+
+1. Tampermonkey/Greasemonkeyをインストールしていなければしてください。
+2. 本ページの上の方にあるファイル一覧から「DontTellMeAboutChallangeDungeon.user.js」を開いて下さい。
+3. 右上の方にある「raw」ボタンを押して下さい。自動的にTampermonkey/Greasemonkeyのスクリプトインストール画面に移行します。「インストール」ボタンを押せばインストール完了です。
+4. スクリプトをOFFにしたい場合はTampermonkey/Greasemonkeyの「インストール済み UserScript」タブから行って下さい。
