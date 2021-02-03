@@ -1,5 +1,7 @@
 # SoLA絡みの制作物
 
+Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)のゲームプレイを補助する目的の制作物を公開しております。
+
 ここで公開されております制作物についてはいずれも自己責任のもとでの使用をお願いいたします。
 
 - [SoLADictionary](#SoLADictionary)
@@ -9,7 +11,7 @@
 最終更新: 2021年2月2日9時ごろ
 
 ### 概要
-Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)用の辞書ファイルです。
+SoLA用の辞書ファイルです。
 
 Google Chrome/Firefox用拡張機能「Mouse Dictionary」に読み込ませて使うものとなっております。（JSON形式なので他でも使えるかもしれません）
 
