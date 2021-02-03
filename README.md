@@ -40,3 +40,8 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 # 製作者
 
 切り株（Twitter: @BehindForestBoy／SoLAのDiscordサーバーにも常駐しております）
+
+
+
+# その他オマケ類
+## DontTellMeAboutChallangeDungeon.user.js
