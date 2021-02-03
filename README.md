@@ -6,12 +6,12 @@ Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoL
 
 ここで公開されております製作物についてはいずれも自己責任のもとでの使用をお願いいたします。
 
-- [SoLADictionary](#SoLADictionary)
+- [SoLA_Dict](#SoLA_Dict)
   - SoLAの用語を収録したMouse Dictionary用辞書ファイル。
 - [DontTellMeAboutChallangeDungeon](#DontTellMeAboutChallangeDungeon)
   - チャレンジダンジョンに関する記述を隠すためのTampermonkey/Greasemonkey用スクリプト。
 
-## SoLADictionary
+## SoLA_Dict
 最終更新: 2021年2月2日9時ごろ
 
 ### 概要
