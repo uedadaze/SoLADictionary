@@ -66,7 +66,7 @@ Tampermonkey/Greasemonkey用スクリプトです。使用中はゲーム中の�
 
 ### 使い方
 
-1. Tampermonkey/Greasemonkeyをインストールしていなければしてください。
+1. Tampermonkey/Greasemonkeyをまだインストールしていない場合は、インストールしてください。
 2. 本ページの上の方にあるファイル一覧から「DontTellMeAboutChallangeDungeon.user.js」を開いて下さい。
 3. 右上の方にある「raw」ボタンを押して下さい。自動的にTampermonkey/Greasemonkeyのスクリプトインストール画面に移行します。「インストール」ボタンを押せばインストール完了です。
 4. スクリプトをOFFにしたい場合はTampermonkey/Greasemonkeyの「インストール済み UserScript」タブから行って下さい。
