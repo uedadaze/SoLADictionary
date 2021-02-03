@@ -12,11 +12,12 @@
 (function() {
     'use strict';
 
-
+    //　メニュー項目の削除
     $("a[href='infinity.php']").prev().remove();
     $("a[href='infinity.php']").next().remove();
     $("a[href='infinity.php']").remove();
 
+    //　チャレンジ到達回数の削除
     $('th:contains("チャレンジ")').next().text('***');
     $('th:contains("チャレンジ")').text('***');
 
