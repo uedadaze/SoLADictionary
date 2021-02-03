@@ -1,7 +1,7 @@
 # SoLA絡みの制作物
 
 - [SoLADictionary](#SoLADictionary)
-- [DontTellMeAboutChallangeDungeon.user.js](#DontTellMeAboutChallangeDungeon.user.js)
+- [DontTellMeAboutChallangeDungeon](#DontTellMeAboutChallangeDungeon.user.js)
 
 ## SoLADictionary
 最終更新: 2021年2月2日9時ごろ
@@ -46,7 +46,7 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 
 切り株（Twitter: @BehindForestBoy／SoLAのDiscordサーバーにも常駐しております）
 
-## DontTellMeAboutChallangeDungeon.user.js
+## DontTellMeAboutChallangeDungeon
 
 最終更新 2021年2月3日
 
