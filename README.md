@@ -2,7 +2,7 @@
 
 Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)のゲームプレイを補助する目的の製作物を公開しております。
 
-製作者はSoLA公式とは一切関係がございません。本ページの製作物についてSoLA公式に問い合わせを行うことは絶対におやめください。
+製作者はSoLA公式とは一切関係がございません。本ページの製作物についてSoLA公式に問い合わせを行うことは絶対におやめください。ご意見・ご質問は切り株（Twitter: @BehindForestBoy／SoLAのDiscordサーバーにも常駐しております）までお願いいたします。
 
 ここで公開されております製作物についてはいずれも自己責任のもとでの使用をお願いいたします。
 
@@ -49,10 +49,6 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 ### 謝辞
 
 本辞書ファイルの製作にあたっては[Story of Lost Artifact Wiki](https://wikiwiki.jp/sola/)の記述を利用させていただいております。Wikiの編集に携わっておられます全ての方々にこの場を借りてお礼申し上げます。
-
-### 製作者
-
-切り株（Twitter: @BehindForestBoy／SoLAのDiscordサーバーにも常駐しております）
 
 ## DontTellMeAboutChallangeDungeon
 
