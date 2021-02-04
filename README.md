@@ -12,7 +12,6 @@ Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoL
   - チャレンジダンジョンに関する記述を隠すためのTampermonkey/Greasemonkey用スクリプト。
 
 ## SoLA_Dict
-最終更新: 2021年2月2日9時ごろ
 
 ### 概要
 SoLA用の辞書ファイルです。
@@ -51,8 +50,6 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 本辞書ファイルの製作にあたっては[Story of Lost Artifact Wiki](https://wikiwiki.jp/sola/)の記述を利用させていただいております。Wikiの編集に携わっておられます全ての方々にこの場を借りてお礼申し上げます。
 
 ## SoLA_DontTellMeAboutChallangeDungeon
-
-最終更新 2021年2月3日
 
 ### 概要
 
