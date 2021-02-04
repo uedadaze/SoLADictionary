@@ -10,6 +10,8 @@ Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoL
   - SoLAの用語を収録したMouse Dictionary用辞書ファイル。
 - [SoLA_DontTellMeAboutChallangeDungeon](#SoLA_DontTellMeAboutChallangeDungeon)
   - チャレンジダンジョンに関する記述を隠すためのTampermonkey/Greasemonkey用スクリプト。
+- [SoLA_UIModification](#SoLA_UIModification)
+  - SoLAのUIの利便性を向上させる修正を施すTampermonkey/Greasemonkey用スクリプト。
 
 ## SoLA_Dict
 
@@ -65,5 +67,24 @@ Tampermonkey/Greasemonkey用スクリプトです。使用中はゲーム中の�
 
 1. Tampermonkey/Greasemonkeyをまだインストールしていない場合は、インストールしてください。
 2. 本ページの上の方にあるファイル一覧から「SoLA_DontTellMeAboutChallangeDungeon.user.js」を開いて下さい。
+3. 右上の方にある「raw」ボタンを押して下さい。自動的にTampermonkey/Greasemonkeyのスクリプトインストール画面に移行します。「インストール」ボタンを押せばインストール完了です。
+4. スクリプトをOFFにしたい場合はTampermonkey/Greasemonkeyの「インストール済み UserScript」タブから行って下さい。
+
+## SoLA_UIModification
+
+### 概要
+
+Tampermonkey/Greasemonkey用スクリプトです。SoLAのUIの利便性を向上させるための修正を施します。
+
+現状では以下の点が変更されます。
+
+- チャット画面で、最下部にあるページ切り替えリンクが、画面上部（お気に入り登録したルーム一覧などがある所の一段下）にも表示されるようになります。
+
+- 戦闘結果ページで、勝敗／戦利品に関する記述・ホーム画面に戻るリンクが、ページ最上部にも表示されるようになります。また、戦闘ログ一覧画面に進むリンクも追加されます。
+
+### 使い方
+
+1. Tampermonkey/Greasemonkeyをまだインストールしていない場合は、インストールしてください。
+2. 本ページの上の方にあるファイル一覧から「SoLA_UIModification.user.js」を開いて下さい。
 3. 右上の方にある「raw」ボタンを押して下さい。自動的にTampermonkey/Greasemonkeyのスクリプトインストール画面に移行します。「インストール」ボタンを押せばインストール完了です。
 4. スクリプトをOFFにしたい場合はTampermonkey/Greasemonkeyの「インストール済み UserScript」タブから行って下さい。
