@@ -8,7 +8,7 @@ Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoL
 
 - [SoLA_Dict](#SoLA_Dict)
   - SoLAの用語を収録したMouse Dictionary用辞書ファイル。
-- [DontTellMeAboutChallangeDungeon](#DontTellMeAboutChallangeDungeon)
+- [SoLA_DontTellMeAboutChallangeDungeon](#SoLA_DontTellMeAboutChallangeDungeon)
   - チャレンジダンジョンに関する記述を隠すためのTampermonkey/Greasemonkey用スクリプト。
 
 ## SoLA_Dict
@@ -50,7 +50,7 @@ Discordをブラウザから開けばSoLAのDiscordサーバーでも使えま�
 
 本辞書ファイルの製作にあたっては[Story of Lost Artifact Wiki](https://wikiwiki.jp/sola/)の記述を利用させていただいております。Wikiの編集に携わっておられます全ての方々にこの場を借りてお礼申し上げます。
 
-## DontTellMeAboutChallangeDungeon
+## SoLA_DontTellMeAboutChallangeDungeon
 
 最終更新 2021年2月3日
 
