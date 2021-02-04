@@ -62,16 +62,6 @@
             upperHTML += result[0];
             upperHTML += "<br>";
         }
-        var af = RegExp('.*を手に入れた！', 'g');
-        result = tex.match(af);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-            if (result.length == 2){
-                upperHTML += result[1];
-                upperHTML += "<br>";
-            }
-        }
         var skill = RegExp("追加の基本スキルを習得した！", 'g');
         result = tex.match(skill);
         if (result != null) {
@@ -83,6 +73,16 @@
         if (result != null) {
             upperHTML += result[0];
             upperHTML += "<br>";
+        }
+        var af = RegExp('.*を手に入れた！', 'g');
+        result = tex.match(af);
+        if (result != null) {
+            upperHTML += result[0];
+            upperHTML += "<br>";
+            if (result.length == 2){
+                upperHTML += result[1];
+                upperHTML += "<br>";
+            }
         }
         var syougo = RegExp('称号.*を手に入れた！', 'g');
         result = tex.match(syougo);
