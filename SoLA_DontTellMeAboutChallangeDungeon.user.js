@@ -18,10 +18,8 @@
     $("a[href='infinity.php']").remove();
 
     //　プロフページでのみチャレンジ到達回数の削除
-    if ( url.match(new RegExp(/main.php/)) != null ) {
         $('th:contains("チャレンジ")').next().text('***');
         $('th:contains("チャレンジ")').text('***');
-    }
 
     // Your code here...
 })();
