@@ -74,7 +74,7 @@
             upperHTML += result[0];
             upperHTML += "<br>";
         }
-        var af = RegExp('.*を手に入れた！', 'g');
+        var af = RegExp('^(?!.*称号).*を手に入れた！', 'g');
         result = tex.match(af);
         if (result != null) {
             upperHTML += result[0];
