@@ -138,9 +138,6 @@
 
         //　味方の状態の変化を記録
         upperHTML += "<table border='1' bordercolor='#AAAAAA' style='color: brown;'><tbody><tr><th width='200' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>キャラ名</th><th width='300' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>戦闘前</th><th width='300' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>戦闘後</th></tr>"
-//    <tr><th class="effect" align="left"><img src="/SoLA/img/support.png" width="20" height="20" style="vertical-align:middle;" title="サポート"> <a href="/../SoLA/main.php?id=352">レグル</a><br>HP:38922<font style="font-size: 10px;">　(300 %)</font><br>SP:658<font style="font-size: 10px;">　(200 %)</font><span class="noweffect"><font class="other">疲労：0</font><br><font class="other" style="font-size: 10px;">HPR : 100% / SPR : 100% / <br>ATK : 100% / DEF : 100% / <br>HIT : 100% / EVA : 100% / <br>CRI : 100% / CD  : 100% / <br>MATK: 100% / MDEF: 100% / <br>MHIT: 100% / MEVA: 100% / <br>MCRI: 100% / MCD : 100% / <br>SPD : 100% / HEAL: 100% / <br>HATE: 100%</font></span></th></tr>
-//<tr><th>1</th><th width="60"><a href="/../SoLA/main.php?id=143"><img src="http://tyaunen.moo.jp/txiloda/picture.php?user=1146&amp;file=picture058.png" width="60" height="60" style="vertical-align:middle;">
-//</tbody></table>"
 
         var firstturn_partydata = $(".teamleft").first().find(".effect");
         var lastturn_partydata = $(".teamleft").last().find(".effect");
