@@ -120,7 +120,7 @@
         if (result != null) {
             upperHTML += result[0];
         }
-        battle_result = RegExp('引き分け！', 'g');
+        battle_result = RegExp('バトルに引き分けた……', 'g');
         result = tex.match(battle_result);
         if (result != null) {
             upperHTML += result[0];
