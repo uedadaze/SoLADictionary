@@ -74,6 +74,12 @@
             upperHTML += result[0];
             upperHTML += "<br>";
         }
+        var card = RegExp('スキルカード【.*】を獲得した！', 'g');
+        result = tex.match(card);
+        if (result != null) {
+            upperHTML += result[0];
+            upperHTML += "<br>";
+        }
         var af = RegExp('^(?!.*称号).*を手に入れた！', 'g');
         result = tex.match(af);
         if (result != null) {
