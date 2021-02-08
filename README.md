@@ -2,7 +2,7 @@
 
 Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoLA/login.php)のゲームプレイを補助する目的の製作物を公開しております。
 
-製作者はSoLA公式とは一切関係がございません。本ページの製作物についてSoLA公式に問い合わせを行うことは絶対におやめください。ご意見・ご質問は切り株（Twitter: @BehindForestBoy／SoLAのDiscordサーバーにも常駐しております）までお願いいたします。
+製作者はSoLA公式とは一切関係がございません。本ページの製作物についてSoLA公式に問い合わせを行うことは絶対におやめください。ご意見ご質問、バグ報告に関しては切り株（Twitter: @BehindForestBoy／SoLAのDiscordサーバーにも常駐しております）までお願いいたします。
 
 ここで公開されております製作物についてはいずれも自己責任のもとでの使用をお願いいたします。
 
