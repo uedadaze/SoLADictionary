@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SoLA_UIModification
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Story of Lost Artifact(SoLA)のUIの利便性を向上させるための修正を施します
 // @author       Kirikabu
 // @match        http://lostartifact.xsrv.jp/SoLA/*
@@ -19,231 +19,111 @@
         return elem.text();
     }
 
-    //　チャットページでは下にあるページ切り替えを上にもコピーする
+    //　チャットページ
+    //　下にあるページ切り替えリンクを画面上部にもコピーする
     if ( url.match(new RegExp('chat.php')) != null ) {
         var favlinks = $("table[style='table-layout: fixed;']");
-
         var linkHTML = $('a[href$="p=1"]').parent().parent().prop('outerHTML');
-
         $("table[style='table-layout: fixed;'][align='center']:eq(1)").before(linkHTML);
     }
 
-    //　戦闘ページでは下にある結果一覧を上にもコピーする
+    //　戦闘ページ
+    //　下にある結果一覧を上にもコピーする。また、ホーム画面や戦闘ログ画面に移行するためのリンクを追加する
     if ( url.match(new RegExp('/battle/')) != null ) {
-        //console.log($("a[href='/../SoLA/main.php']").prev().prev().prev());
-
-        var tex = $("#main").text()
-
+        //　ログを得る
+        var tex = $("#main").text();
+        //　結果部分HTML
         var upperHTML = "戦闘結果:<br>";
-
-        var winner = RegExp('.*チームの勝利！', 'g');
-        var result = tex.match(winner);
-        if (result != null) {
-            upperHTML += result[0];
-        }else{
-            upperHTML += "引き分け！";
+        //　戦闘結果を検索（テキストむき出しなのでこうしないと取ってこれない）
+        var reg = RegExp('(.*チームの勝利！|引き分け！|ステータスポイントを[0-9]*取得した！|ギルドメダルを[0-9]*枚取得した！|メルを.*mel取得した！|追加の基本スキルを習得した！|名声を[0-9]*獲得した！|スキルカード【.*】を獲得した！|.*を手に入れた！|持ち物がいっぱいだった！自動的に解放された！|称号.*を手に入れた！)', 'g');
+        var result = tex.match(reg);
+        for (const element of result) {
+            upperHTML += element + "<br>";
         }
-        upperHTML += "<br>";
-        var stepo = RegExp('ステータスポイントを[0-9]*取得した！', 'g');
-        result = tex.match(stepo);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-        }
-        var medal = RegExp('ギルドメダルを[0-9]*枚取得した！', 'g');
-        result = tex.match(medal);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-        }
-        var mel = RegExp('メルを.*mel取得した！', 'g');
-        result = tex.match(mel);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-        }
-        var skill = RegExp("追加の基本スキルを習得した！", 'g');
-        result = tex.match(skill);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-        }
-        var meisei = RegExp("名声を[0-9]*獲得した！", 'g');
-        result = tex.match(meisei);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-        }
-        var card = RegExp('スキルカード【.*】を獲得した！', 'g');
-        result = tex.match(card);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-        }
-        var af = RegExp('^(?!.*称号).*を手に入れた！', 'g');
-        result = tex.match(af);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-            if (result.length == 2){
-                upperHTML += result[1];
-                upperHTML += "<br>";
-            }
-        }
-        var affailed = RegExp('持ち物がいっぱいだった！自動的に解放された！', 'g');
-        result = tex.match(affailed);
-        if (result != null){
-            upperHTML += result[0];
-            upperHTML += "<br>";
-        }
-        var syougo = RegExp('称号.*を手に入れた！', 'g');
-        result = tex.match(syougo);
-        if (result != null) {
-            upperHTML += result[0];
-            upperHTML += "<br>";
-        }
+        //　リンクを追加
         upperHTML += "<br><a href='/../SoLA/battlelog.php'>戦闘ログ一覧へ移動</a><br><br>";
         upperHTML += "<a href='/../SoLA/main.php'>ホーム画面に戻る</a>";
-
+        //　ページに挿入して終了
         $("#main > div.center").before(upperHTML);
-
     }
 
     //　チャレダンページ
+    //　結果と戻るリンクのコピーに加え、戦闘前後での状態の変化を記述する
     if ( url.match(new RegExp('/battle.php')) != null ) {
         //　チャレダンメニューを上へ
         tex = $("#main").text()
         upperHTML = "戦闘結果:<br>";
 
-        var battle_result = RegExp('バトルに勝利した！', 'g');
-        result = tex.match(battle_result);
-        if (result != null) {
-            upperHTML += result[0];
-        }
-        battle_result = RegExp('バトルに引き分けた……', 'g');
-        result = tex.match(battle_result);
-        if (result != null) {
-            upperHTML += result[0];
-        }
-        battle_result = RegExp('バトルに敗北した……', 'g');
-        result = tex.match(battle_result);
-        if (result != null) {
-            upperHTML += result[0];
-            var result_floor = RegExp('記録：[0-9]*階', 'g');
-            if (result_floor != null){
-                upperHTML += "<br>" + result_floor[0];
-            }
+        //　勝敗の結果
+        reg = RegExp('(バトルに勝利した！|バトルに引き分けた……|バトルに敗北した……|記録：[0-9]*階)', 'g');
+        result = tex.match(reg);
+        for (const element of result) {
+            upperHTML += element + "<br>";
         }
         upperHTML += "<br><a href='http://lostartifact.xsrv.jp/SoLA/infinity.php'>チャレンジダンジョンメニューに戻る</a><br><br>"
 
-        //　味方の状態の変化を記録
-        upperHTML += "<table border='1' bordercolor='#AAAAAA' style='color: brown;'><tbody><tr><th width='200' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>キャラ名</th><th width='300' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>戦闘前</th><th width='300' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>戦闘後</th></tr>"
-
+        //　味方の状態変化の記録
+        upperHTML += "<table border='1' bordercolor='#AAAAAA' style='color: brown; background-color: #FFFFFF'><tbody><tr><th width='200' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>キャラ名</th><th width='300' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>戦闘前</th><th width='300' style='background-color: rgba(225, 225, 255, 0.6); color: rgb(32, 46, 64);'>戦闘後</th></tr>"
         var firstturn_partydata = $(".teamleft").first().find(".effect");
         var lastturn_partydata = $(".teamleft").last().find(".effect");
 
-        //　人数は変わらないはずなのでいっぺんに……
+        //　人数は変わらないはずなのでいっぺんに
+        //　（将来的にメンバーを戦闘から追放する、みたいなスキルが出現した場合はまた考えます）
         for (let i = 0; i < firstturn_partydata.length; i++) {
-            //　開始時状態
+            // キャラクター名取得
             var charaname = $(firstturn_partydata[i]).find("a").text()
             upperHTML += "<tr><th width='200'>" + charaname + "</th>";
-            var charatext = $(firstturn_partydata[i]).text();
-            //　HP
-            var param = RegExp('HP:-?[0-9]*', 'g');
-            result = charatext.match(param);
-            if (result != null) {
-                var chara_prehp = result[0];
+            //　戦闘開始前後のテキスト
+            var firstturn_charatext = $(firstturn_partydata[i]).text();
+            var lastturn_charatext = $(lastturn_partydata[i]).text();
+            //　前後でのHPの比較
+            reg = RegExp('HP:-?[0-9]*', 'g');
+            result = firstturn_charatext.match(reg);
+            var chara_prehp = result ? parseInt(result[0].replace("HP:", ""), 10) : "HPを取得できませんでした";
+            result = lastturn_charatext.match(reg);
+            var chara_posthp = result ? parseInt(result[0].replace("HP:", ""), 10) : "HPを取得できませんでした";
+            if (!Number.isNaN(chara_prehp) && !Number.isNaN(chara_posthp)){
+                //　HPが同値なら黒、増えていれば青、少なくなっていれば赤で表記
+                var hpcolor = "";
+                if (chara_prehp == chara_posthp){ hpcolor = "#000000"; }
+                if (chara_prehp > chara_posthp){ hpcolor = "#ff2266"; }
+                if (chara_prehp < chara_posthp){ hpcolor = "#0088ff"; }
             }
-            //　SP
-            param = RegExp('SP:-?[0-9]*', 'g');
-            result = charatext.match(param);
-            if (result != null) {
-                var chara_presp = result[0];
+            //　SPもHPと同様に比較する
+            reg = RegExp('SP:-?[0-9]*', 'g');
+            result = firstturn_charatext.match(reg);
+            var chara_presp = result ? parseInt(result[0].replace("SP:", ""), 10) : "SPを取得できませんでした";
+            result = lastturn_charatext.match(reg);
+            var chara_postsp = result ? parseInt(result[0].replace("SP:", ""), 10) : "SPを取得できませんでした";
+            if (!Number.isNaN(chara_presp) && !Number.isNaN(chara_postsp)){
+                var spcolor = "";
+                if (chara_presp == chara_postsp){ spcolor = "#000000"; }
+                if (chara_presp > chara_postsp){ spcolor = "#ff2266"; }
+                if (chara_presp < chara_postsp){ spcolor = "#0088ff"; }
             }
-            //　変調
+            //　肉体変調
+            reg = RegExp('(猛毒|衰弱|麻痺|火傷)：[0-9]*', 'g');
+            //　前
             var hentyo_p_pre = "";
-            param = RegExp('(猛毒|衰弱|麻痺|火傷)：[0-9]*', 'g');
-            result = charatext.match(param);
-            if(result != null){
-                for (let i = 0; i < result.length; i++){
-                    hentyo_p_pre += result[i] + "　";
-                }
-            }
-            var hentyo_m_pre = "";
-            param = RegExp('(魅了|呪縛|混乱|狼狽)：[0-9]*', 'g');
-            result = charatext.match(param);
-            if(result != null){
-                for (let i = 0; i < result.length; i++){
-                    hentyo_m_pre += result[i] + "　";
-                }
-            }
-            upperHTML += "<th width='300' align='left'>" + chara_prehp + "<br>" + chara_presp + "<br><span style='color: red;'>肉→" + hentyo_p_pre + "</span><br><span style='color: darkcyan;'>精→" + hentyo_m_pre + "</span></th>";
-
-            //　終了時状態
-            charatext = $(lastturn_partydata[i]).text();
-            //　HP
-            upperHTML += "<th width='300' align='left'>"
-            param = RegExp('HP:-?[0-9]*', 'g');
-            result = charatext.match(param);
-            if (result != null) {
-                var chara_posthp = result[0];
-                //　前後で比較する
-                var prehp = chara_prehp.replace("HP:", "");
-                prehp = parseInt(prehp, 10);
-                var posthp = chara_posthp.replace("HP:", "");
-                posthp = parseInt(posthp, 10);
-                //　差異によって色分け
-                if (prehp == posthp){
-                    upperHTML += "<span style='color:#ffffff;'>" + chara_posthp + "</span>";
-                }
-                if (prehp > posthp){
-                    upperHTML += "<span style='color:#ff4488;'>" + chara_posthp + "</span>";
-                }
-                if (prehp < posthp){
-                    upperHTML += "<span style='color:#00ffff;'>" + chara_posthp + "</span>";
-                }
-                upperHTML += "<br>";
-            }
-            //　SP
-            param = RegExp('SP:-?[0-9]*', 'g');
-            result = charatext.match(param);
-            if (result != null) {
-                var chara_postsp = result[0];
-                //　前後で比較する
-                var presp = chara_presp.replace("SP:", "");
-                presp = parseInt(presp, 10);
-                var postsp = chara_postsp.replace("SP:", "");
-                postsp = parseInt(postsp, 10);
-                //　差異によって色分け
-                if (presp == postsp){
-                    upperHTML += "<span style='color:#ffffff;'>" + chara_postsp + "</span>";
-                }
-                if (presp > postsp){
-                    upperHTML += "<span style='color:#ff4488;'>" + chara_postsp + "</span>";
-                }
-                if (presp < postsp){
-                    upperHTML += "<span style='color:#00ffff;'>" + chara_postsp + "</span>";
-                }
-                upperHTML += "<br>";
-            }
-            //　変調
+            result = firstturn_charatext.match(reg);
+            if (result != null){ for (const element of result){ hentyo_p_pre += element + "　"; } }
+            //　後
             var hentyo_p_post = "";
-            param = RegExp('(猛毒|衰弱|麻痺|火傷)：[0-9]*', 'g');
-            result = charatext.match(param);
-            if (result != null){
-                for (let i = 0; i < result.length; i++){
-                    hentyo_p_post += result[i] + "　";
-                }
-            }
+            result = lastturn_charatext.match(reg);
+            if (result != null){ for (const element of result){ hentyo_p_post += element + "　"; } }
+            //　精神変調
+            reg = RegExp('(魅了|呪縛|混乱|狼狽)：[0-9]*', 'g');
+            //　前
+            var hentyo_m_pre = "";
+            result = firstturn_charatext.match(reg);
+            if (result != null){ for (const element of result){ hentyo_m_pre += element + "　"; } }
+            //　後
             var hentyo_m_post = "";
-            param = RegExp('(魅了|呪縛|混乱|狼狽)：[0-9]*', 'g');
-            result = charatext.match(param);
-            if (result != null){
-                for (let i = 0; i < result.length; i++){
-                    hentyo_m_post += result[i] + "　";
-                }
-            }
-            upperHTML += "<span style='color: red;'>肉→" + hentyo_p_post + "</span><br><span style='color: darkcyan;'>精→" + hentyo_m_post + "</span></th></tr>";
+            result = lastturn_charatext.match(reg);
+            if (result != null) { for (const element of result){ hentyo_m_post += element + "　"; } }
+            // HTML出力
+            upperHTML += "<th width='300' align='left'>HP:" + chara_prehp + "<br>SP:" + chara_presp + "<br><span style='color: red;'>肉→" + hentyo_p_pre + "</span><br><span style='color: darkcyan;'>精→" + hentyo_m_pre + "</span></th>";
+            upperHTML += "<th width='300' align='left'><span style='color: " + hpcolor + ";'>HP:" + chara_posthp + "<br><span style='color: " + spcolor + ";'>SP:" + chara_postsp + "<br><span style='color: red;'>肉→" + hentyo_p_post + "</span><br><span style='color: darkcyan;'>精→" + hentyo_m_post + "</span></th></tr>";
         }
 
         upperHTML += "</tbody></table>"
