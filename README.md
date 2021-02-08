@@ -4,7 +4,7 @@ Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoL
 
 製作者はSoLA公式とは一切関係がございません。本ページの製作物についてSoLA公式に問い合わせを行うことは絶対におやめください。ご意見ご質問、バグ報告に関しては切り株（Twitter: @BehindForestBoy／SoLAのDiscordサーバーにも常駐しております）までお願いいたします。
 
-ここで公開されております製作物についてはいずれも自己責任のもとでの使用をお願いいたします。
+ここで公開されております製作物についてはいずれも自己責任のもとでのご使用をお願いいたします。
 
 - [SoLA_Dict](#SoLA_Dict)
   - SoLAの用語を収録したMouse Dictionary用辞書ファイル。
