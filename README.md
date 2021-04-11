@@ -23,7 +23,6 @@ SoLA用の辞書ファイルです。Google Chrome/Firefox用拡張機能「Mous
 - 各種スキル（能力値スキル/章追加スキル/クラススキル/アーティファクトスキル/カードスキル）の名称と効果
 - アーティファクトの名称と効果
 - スキルカードの名称と収録スキル
-- 敵NPCの情報（現在はメインストーリーのみ対応しております）
 
 ### 使い方
 1. Google ChromeあるいはFirefoxで、[「Mouse Dictionary」](https://mouse-dictionary.netlify.app/ja/)をインストールしてください。
