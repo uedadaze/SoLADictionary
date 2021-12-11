@@ -12,6 +12,8 @@ Webゲーム[「Story of Lost Artifact」(SoLA)](http://lostartifact.xsrv.jp/SoL
   - チャレンジダンジョンに関する記述を隠すためのTampermonkey/Greasemonkey用スクリプト。
 - [SoLA_UIModification](#SoLA_UIModification)
   - SoLAのUIの利便性を向上させる修正を施すTampermonkey/Greasemonkey用スクリプト。
+- [SoLA_SakadachiLog](#SoLA_SakadachiLog)
+  - SoLAのチャットログの順番を反転させ、保存に適した状態にする機能を追加するTampermonkey/Greasemonkey用スクリプト。
 
 ## SoLA_Dict
 
@@ -76,5 +78,19 @@ Tampermonkey/Greasemonkey用スクリプトです。SoLAのUIの利便性を向�
 
 1. Tampermonkey/Greasemonkeyをまだインストールしていない場合は、インストールしてください。
 2. 本ページの上の方にあるファイル一覧から「SoLA_UIModification.user.js」を開いて下さい。
+3. 右上の方にある「raw」ボタンを押して下さい。自動的にTampermonkey/Greasemonkeyのスクリプトインストール画面に移行します。「インストール」ボタンを押せばインストール完了です。
+4. スクリプトをOFFにしたい場合はTampermonkey/Greasemonkeyの「インストール済み UserScript」タブから行って下さい。
+
+## SoLA_SakadachiLog
+
+### 概要
+
+Tampermonkey/Greasemonkey用スクリプトです。
+チャット画面に「ログを反転！」ボタンを追加します。押すとチャットログの順番が逆転し、上から下に読む形にできます。もう一度押すと元に戻ります。チャットログを保存したい際にお使いください。
+
+### 使い方
+
+1. Tampermonkey/Greasemonkeyをまだインストールしていない場合は、インストールしてください。
+2. 本ページの上の方にあるファイル一覧から「SoLA_SakadachiLog.user.js」を開いて下さい。
 3. 右上の方にある「raw」ボタンを押して下さい。自動的にTampermonkey/Greasemonkeyのスクリプトインストール画面に移行します。「インストール」ボタンを押せばインストール完了です。
 4. スクリプトをOFFにしたい場合はTampermonkey/Greasemonkeyの「インストール済み UserScript」タブから行って下さい。
